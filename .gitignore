@@ -25,6 +25,8 @@ Prompt.txt
 analyse.txt
 STATUS.md
 CLAUDE.md
+github.txt
+*.notes.txt
 
 # Asset source folder (Photoshop/PNG quellen — not needed for build)
 /layout/

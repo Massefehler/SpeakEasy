@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/menu_settings" />
+    <item
+        android:id="@+id/action_help"
+        android:title="@string/menu_help" />
+    <item
+        android:id="@+id/action_feedback"
+        android:title="@string/menu_feedback" />
+    <item
+        android:id="@+id/action_diagnostic"
+        android:title="@string/menu_diagnostic" />
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/menu_about" />
+</menu>

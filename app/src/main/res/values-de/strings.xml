@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SpeakEasy</string>
+    <string name="subtitle">Motorrad-Intercom via Bluetooth</string>
+
+    <string name="section_connection">Verbindung</string>
+    <string name="section_advanced">Erweitert</string>
+    <string name="section_howto">So funktioniert\'s</string>
+
+    <string name="btn_search">Teilnehmer suchen</string>
+    <string name="btn_search_again">Erneut suchen</string>
+    <string name="btn_host">Hosten – auf Peer warten</string>
+    <string name="btn_join">Mit gepairtem Gerät verbinden</string>
+    <string name="btn_disconnect">Trennen</string>
+    <string name="btn_close">Schließen</string>
+
+    <string name="mute">Mikrofon stumm</string>
+    <string name="mute_hint">Du wirst nicht mehr gehört, hörst aber weiter</string>
+
+    <string name="peer_label">Gegenstelle</string>
+    <string name="peer_none">Nicht verbunden</string>
+
+    <string name="status_idle">Bereit</string>
+    <string name="status_searching">Suche Teilnehmer …</string>
+    <string name="status_listening">Warte auf Verbindung …</string>
+    <string name="status_connecting">Verbinde …</string>
+    <string name="status_connected">Verbunden mit %1$s</string>
+    <string name="status_reconnecting">Verbindung verloren – Versuch %1$d …</string>
+    <string name="status_error">Fehler: %1$s</string>
+
+    <string name="section_levels">Audio-Pegel</string>
+    <string name="level_self">Du</string>
+    <string name="level_peer">Peer</string>
+
+    <string name="section_quick">Schnellverbindung</string>
+    <string name="btn_direct_connect">Verbinden mit %1$s</string>
+    <string name="profile_actions_title">%1$s</string>
+    <string name="profile_action_connect">Verbinden</string>
+    <string name="profile_action_rename">Umbenennen</string>
+    <string name="profile_action_delete">Entfernen</string>
+    <string name="profile_rename_title">Umbenennen</string>
+    <string name="profile_rename_hint">Neuer Name</string>
+
+    <string name="peer_volume">Lautstärke Peer</string>
+    <string name="rtt_label">Latenz: %1$d ms</string>
+    <string name="rtt_unknown">Latenz: –</string>
+
+    <string name="peer_battery">Peer-Akku: %1$d %%</string>
+
+    <string name="section_sensitivity">Empfindlichkeit Sprach-Gate</string>
+    <string name="sensitivity_label">%1$+d dB</string>
+    <string name="sensitivity_hint">Negativ = empfindlicher (auch leise Stimmen durch), positiv = strenger (mehr Wind-/Geräuschunterdrückung).</string>
+
+    <string name="tts_connected">Verbunden mit %1$s</string>
+    <string name="tts_disconnected">Verbindung getrennt</string>
+    <string name="tts_reconnecting">Verbindung verloren, versuche erneut</string>
+    <string name="tts_error">Verbindung gescheitert</string>
+    <string name="tts_paused_for_call">Intercom pausiert</string>
+    <string name="tts_resumed">Intercom wieder aktiv</string>
+
+    <string name="permission_rationale_title">Berechtigung erforderlich</string>
+    <string name="permission_rationale_msg">SpeakEasy braucht die Berechtigungen für Mikrofon und Bluetooth, um das Intercom zu betreiben. Ohne sie bleibt die App stumm. Bitte aktiviere die Berechtigungen in den App-Einstellungen.</string>
+    <string name="permission_rationale_open">App-Einstellungen öffnen</string>
+
+    <string name="diag_title">Diagnose</string>
+    <string name="diag_state">Zustand</string>
+    <string name="diag_peer">Peer</string>
+    <string name="diag_codec">Codec</string>
+    <string name="diag_mic_mode">Mikro-Modus</string>
+    <string name="diag_aec">Echo-Canceler</string>
+    <string name="diag_ns">Noise-Suppress</string>
+    <string name="diag_frames">Frames TX / RX</string>
+    <string name="diag_rtt">Latenz akt./avg</string>
+    <string name="diag_noise_floor">Geräuschpegel-Boden</string>
+    <string name="diag_gate_threshold">Gate-Schwelle</string>
+    <string name="diag_active">an</string>
+    <string name="diag_inactive">aus</string>
+
+    <string name="section_mic_mode">Mikrofon-Modus</string>
+    <string name="mic_mode_open">Offen</string>
+    <string name="mic_mode_filter">Wind-Filter</string>
+    <string name="mic_mode_gate">Sprach-Gate</string>
+    <string name="mic_mode_open_hint">Alles wird übertragen – auch Wind und Motorgeräusche.</string>
+    <string name="mic_mode_filter_hint">Tieffrequenz-Wind ist herausgefiltert, Sprache läuft offen.</string>
+    <string name="mic_mode_gate_hint">Nur erkannte Sprache wird übertragen, Stille bleibt still.</string>
+
+    <string name="intro_skip">Überspringen</string>
+    <string name="intro_next">Weiter</string>
+    <string name="intro_finish">Los geht\'s</string>
+    <string name="intro_1_title">Bluetooth-Headset koppeln</string>
+    <string name="intro_1_body">Bevor du SpeakEasy nutzt: Verbinde auf jedem Telefon das Motorrad-Headset oder die InEars in den Android-Bluetooth-Einstellungen. Sonst läuft die Sprache über Lautsprecher und Telefon-Mikrofon.</string>
+    <string name="intro_2_title">Auf beiden Telefonen „Suchen"</string>
+    <string name="intro_2_body">Tippe auf beiden Telefonen den großen Knopf „Teilnehmer suchen" und erlaube die Sichtbarkeit. Sobald die Gegenstelle in der Liste erscheint, antippen und „Ja" – die Verbindung steht.</string>
+    <string name="intro_3_title">Lautstärke prüfen</string>
+    <string name="intro_3_body">Wenn ihr verbunden seid, zeigen die Pegelbalken (Du / Peer), dass das Audio wirklich am Headset ankommt. Lautstärke regelst du mit den Hardware-Tasten am Telefon.</string>
+
+    <string name="battery_dialog_title">Akku-Optimierung deaktivieren</string>
+    <string name="battery_dialog_msg">Damit das Intercom auch nach längerer Fahrt nicht plötzlich abreißt, schließe SpeakEasy in den System-Einstellungen von der Akku-Optimierung aus.</string>
+    <string name="battery_dialog_open">Einstellungen öffnen</string>
+    <string name="battery_dialog_later">Später</string>
+
+    <!-- Wallpaper-Auswahl -->
+    <string name="prefs_wallpaper_title">Hintergrundbild</string>
+    <string name="wallpaper_title">Hintergrundbild</string>
+    <string name="wallpaper_default">Sonnenuntergang</string>
+    <string name="wallpaper_biker_1">Biker I</string>
+    <string name="wallpaper_biker_2">Biker II</string>
+    <string name="wallpaper_cross_1">Crossover</string>
+    <string name="wallpaper_naked">Naked Bike</string>
+    <string name="wallpaper_riders_1">Sozius I</string>
+    <string name="wallpaper_riders_2">Sozius II</string>
+    <string name="wallpaper_speed_1">Speed I</string>
+    <string name="wallpaper_speed_2">Speed II</string>
+    <string name="wallpaper_travel_1">Reise I</string>
+    <string name="wallpaper_travel_2">Reise II</string>
+
+    <!-- Haftungshinweis (einmalig beim ersten Start, später nachlesbar im „Über"-Screen) -->
+    <string name="disclaimer_title">Bevor du loslegst</string>
+    <string name="disclaimer_body">SpeakEasy ist ein freies Hobby-Projekt ohne Garantie auf Verbindungsstabilität oder Audioqualität.\n\nBediene die App ausschließlich im Stand. Im Straßenverkehr gilt deine volle Aufmerksamkeit dem Verkehr und den geltenden Vorschriften.\n\nDer Entwickler übernimmt keine Haftung für Schäden, Unfälle oder sonstige Folgen, die im Zusammenhang mit der Nutzung der App entstehen.</string>
+    <string name="disclaimer_accept">Verstanden</string>
+    <string name="disclaimer_section_header">Haftungshinweis</string>
+
+    <string name="search_title">Teilnehmer in der Nähe</string>
+    <string name="search_finished">Suche beendet</string>
+    <string name="searching_for_peers">Suche läuft … beide Telefone müssen auf „Teilnehmer suchen" tippen.</string>
+    <string name="no_peers_found">Kein SpeakEasy-Teilnehmer gefunden. Stelle sicher, dass die Gegenstelle ebenfalls auf „Teilnehmer suchen" tippt.</string>
+    <string name="connect_question_title">Verbinden?</string>
+    <string name="connect_question_msg">Möchtest du dich mit „%1$s" verbinden?</string>
+    <string name="must_allow_discoverable">Sichtbarkeit muss aktiviert sein, damit dich der andere Teilnehmer findet.</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="incoming_connected">Verbindung mit %1$s eingegangen</string>
+
+    <string name="choose_peer">Mit gepairtem Gerät verbinden</string>
+    <string name="no_paired_devices">Keine gepairten Geräte – bitte zuerst beide Telefone in den Android-Einstellungen koppeln.</string>
+    <string name="error_no_bluetooth">Dieses Gerät hat kein Bluetooth.</string>
+    <string name="error_permissions">Berechtigungen erforderlich (Bluetooth, Mikrofon).</string>
+
+    <string name="hint">1. Beide Telefone in den Android-Einstellungen miteinander koppeln.\n2. Bluetooth-Headset mit jedem Telefon verbinden.\n3. Auf einem Telefon „Hosten", auf dem anderen „Verbinden".</string>
+
+    <!-- Menü -->
+    <string name="menu_settings">Einstellungen</string>
+    <string name="menu_diagnostic">Diagnose</string>
+    <string name="menu_about">Über die App</string>
+    <string name="menu_more">Weitere Optionen</string>
+    <string name="menu_feedback">Feedback senden</string>
+
+    <!-- Feedback-Dialog (Friends-Beta-Kanal) -->
+    <string name="feedback_dialog_title">Feedback senden</string>
+    <string name="feedback_dialog_msg">Dein Feedback geht per E-Mail an den Entwickler. Optional kannst du die lokalen Crash-Logs anhängen (nur technische Infos – kein Audio, kein Standort).</string>
+    <string name="feedback_dialog_with_logs">Mit Logs senden</string>
+    <string name="feedback_dialog_without_logs">Senden</string>
+    <string name="feedback_subject">SpeakEasy %1$s Feedback</string>
+    <string name="feedback_body_template">[Hier dein Feedback eintragen]\n\n---\nApp: %1$s (%2$d)\nGerät: %3$s %4$s\nAndroid: %5$s (SDK %6$d)\n</string>
+    <string name="feedback_no_email_app">Keine E-Mail-App auf diesem Gerät gefunden.</string>
+    <string name="help_feedback_intro">Trotzdem hängengeblieben oder eine Idee? Schick eine kurze Nachricht an den Entwickler:</string>
+
+    <!-- Einstellungen -->
+    <string name="settings_title">Einstellungen</string>
+    <string name="prefs_audio_section">Audio</string>
+    <string name="prefs_codec_title">Audio-Codec</string>
+    <string name="prefs_codec_summary">Welcher Codec überträgt Sprache zum Peer (beide Telefone müssen denselben nutzen).</string>
+    <string name="prefs_bitrate_title">Opus-Bitrate</string>
+    <string name="prefs_bitrate_summary">%1$d kbps – höher = bessere Qualität, mehr Funklast</string>
+    <string name="prefs_bitrate_value">%1$d kbps</string>
+    <string name="prefs_bitrate_hint">Höher = bessere Sprachqualität, aber mehr Bluetooth-Last.</string>
+    <string name="prefs_fec_title">FEC: erwarteter Paketverlust</string>
+    <string name="prefs_fec_summary">%1$d %% – Opus reserviert mehr Daten zum Wiederherstellen verlorener Frames</string>
+    <string name="prefs_fec_value">%1$d %%</string>
+    <string name="prefs_fec_hint">Wie viel Reserve Opus pro Paket einplant, um Lücken zu füllen.</string>
+
+    <string name="prefs_connection_section">Verbindung</string>
+    <string name="prefs_autoconnect_title">Auto-Verbinden beim App-Start</string>
+    <string name="prefs_autoconnect_summary">Verbindet automatisch zum letzten Peer, wenn du die App öffnest.</string>
+    <string name="prefs_heartbeat_title">Heartbeat-Intervall</string>
+    <string name="prefs_heartbeat_summary">%1$d s – kürzer = schnellere Erkennung von Funkabbrüchen, mehr Funklast</string>
+    <string name="prefs_heartbeat_value">%1$d s</string>
+    <string name="prefs_heartbeat_hint">Kürzer = schnellere Erkennung von Abbrüchen, mehr Funklast.</string>
+
+    <string name="prefs_ui_section">Bedienung &amp; Anzeige</string>
+    <string name="prefs_language_title">Sprache</string>
+    <string name="prefs_theme_title">Design</string>
+    <string name="prefs_tts_title">Status-Ansagen (TTS)</string>
+    <string name="prefs_tts_summary">Spricht „Verbunden" / „Verbindung verloren" ins Headset.</string>
+    <string name="prefs_vibration_title">Vibrations-Feedback</string>
+    <string name="prefs_vibration_summary">Kurze Vibration bei Statuswechsel.</string>
+    <string name="prefs_tones_title">Ton-Cues</string>
+    <string name="prefs_tones_summary">Kurze Pieps-Töne bei Statuswechsel.</string>
+    <string name="prefs_autodim_title">Auto-Dim aktivieren</string>
+    <string name="prefs_autodim_summary">Display dimmt nach 10 s, schaltet nach 40 s aus.</string>
+
+    <string name="prefs_about_section">Über</string>
+    <string name="prefs_version_title">Version</string>
+    <string name="prefs_show_intro_title">Erst-Anleitung erneut zeigen</string>
+    <string name="prefs_show_intro_summary">Zeigt die 3-seitige Einführung beim nächsten App-Start.</string>
+    <string name="prefs_licenses_title">Open-Source-Lizenzen</string>
+    <string name="prefs_licenses_summary">libopus und weitere verwendete Bibliotheken.</string>
+    <string name="prefs_privacy_title">Datenschutz</string>
+    <string name="prefs_privacy_summary">SpeakEasy sendet keine Daten ans Internet. Audio läuft direkt zwischen den beiden Telefonen.</string>
+    <string name="prefs_privacy_link_hint">Vollständige Datenschutzerklärung anzeigen →</string>
+    <string name="prefs_reset_title">Alle Einstellungen zurücksetzen</string>
+    <string name="prefs_reset_summary">Setzt alle Optionen auf Werkseinstellung zurück.</string>
+    <string name="prefs_reset_confirm">Alle Einstellungen werden auf den Auslieferungszustand zurückgesetzt. Profile und gepairte Geräte bleiben erhalten.</string>
+
+    <!-- Sprache-Optionen -->
+    <string name="language_system">System-Standard</string>
+    <string name="language_en">English</string>
+    <string name="language_de">Deutsch</string>
+    <string name="language_es">Español</string>
+    <string name="language_it">Italiano</string>
+    <string name="language_fr">Français</string>
+
+    <!-- Theme-Optionen -->
+    <string name="theme_system">System-Standard</string>
+    <string name="theme_light">Hell</string>
+    <string name="theme_dark">Dunkel</string>
+
+    <!-- Codec-Optionen -->
+    <string name="codec_opus">Opus (empfohlen)</string>
+    <string name="codec_mulaw">G.711 μ-law (Fallback)</string>
+    <string name="codec_pcm">PCM (ungepackt)</string>
+
+    <!-- Lizenzen -->
+    <string name="licenses_title">Open-Source-Lizenzen</string>
+    <string name="licenses_intro">SpeakEasy verwendet folgende Open-Source-Bibliotheken:</string>
+    <string name="licenses_opus_header">libopus 1.5.2 — Xiph.Org Foundation, BSD-3-Clause</string>
+    <string name="licenses_androidx_header">AndroidX &amp; Material Components — Apache License 2.0</string>
+    <string name="licenses_androidx_text">Copyright (c) Google Inc. und Contributors.\nLizenziert unter der Apache License, Version 2.0.\nhttps://www.apache.org/licenses/LICENSE-2.0</string>
+
+    <string name="cd_more_options">Menü öffnen</string>
+
+    <string name="prefs_bt_pair_title">Bluetooth-Geräte koppeln</string>
+    <string name="prefs_bt_pair_summary">Öffnet die Android-Bluetooth-Einstellungen, um Headset oder Partner-Telefon zu koppeln.</string>
+
+    <string name="prefs_agc_title">Automatische Lautstärke-Anpassung</string>
+    <string name="prefs_agc_summary">Gleicht laute und leise Stimmen aus, damit der Peer eine konstante Lautstärke hört.</string>
+
+    <string name="prefs_mic_test_title">Mikrofon-Test</string>
+    <string name="prefs_mic_test_summary">5 Sekunden aufnehmen und übers Headset abspielen, um vor der Tour das Setup zu prüfen.</string>
+    <string name="mic_test_title">Mikrofon-Test</string>
+    <string name="mic_test_intro">Auf „Aufnehmen" tippen, 5 Sekunden normal sprechen, dann auf „Wiedergabe" — die Aufnahme kommt aus deinem Headset, genau so wie der Peer dich hören würde.</string>
+    <string name="mic_test_record_btn">Aufnehmen (5 s)</string>
+    <string name="mic_test_stop_btn">Stopp</string>
+    <string name="mic_test_playback_btn">Wiedergabe</string>
+    <string name="mic_test_status_idle">Bereit</string>
+    <string name="mic_test_status_recording">Aufnahme läuft …</string>
+    <string name="mic_test_status_playing">Wiedergabe läuft …</string>
+    <string name="mic_test_status_done">Fertig</string>
+    <string name="mic_test_hint">Aufnahme über das aktuell aktive System-Mikrofon, Wiedergabe über den Standard-Audio-Ausgang. Die Aufnahme wird nicht gespeichert. Um speziell das Bluetooth-Headset-Mikrofon zu testen, baue eine echte Intercom-Verbindung auf — dort wird das Headset-Routing aktiv.</string>
+
+    <string name="diag_export_logs">Crash-Logs teilen</string>
+    <string name="diag_export_empty">Keine Crash-Logs vorhanden.</string>
+
+    <string name="prefs_adaptive_bitrate_title">Adaptive Bitrate</string>
+    <string name="prefs_adaptive_bitrate_summary">Senkt die Opus-Bitrate automatisch, wenn die Latenz steigt (über 800 ms), und stellt sie wieder her, sobald die Strecke sich erholt (unter 400 ms).</string>
+
+    <string name="menu_help">Hilfe &amp; FAQ</string>
+    <string name="help_title">Hilfe &amp; FAQ</string>
+    <string name="help_intro">Typische Probleme aus dem Real-Test-Betrieb und wie du sie behebst.</string>
+
+    <string name="help_t1_title">Mein Bluetooth-Headset bleibt stumm</string>
+    <string name="help_t1_body">Stelle sicher, dass das Headset in den Android-Bluetooth-Einstellungen jedes Telefons gepairt ist. SpeakEasy routet das Audio erst dann übers Headset, wenn eine echte Intercom-Verbindung steht – Pairing allein reicht nicht. Wenn weiterhin Stille: Headset in den System-Einstellungen einmal trennen und wieder verbinden.</string>
+
+    <string name="help_t2_title">Die Verbindung bricht alle paar Minuten ab</string>
+    <string name="help_t2_body">In der Regel killt die System-Akku-Optimierung unseren Hintergrund-Service. In den Einstellungen → System → „Akku-Optimierung deaktivieren" sicherstellen, dass SpeakEasy auf der Whitelist steht. Auto-Reconnect (1/3/8 s) sollte zudem aktiv bleiben – die App baut die Verbindung dann automatisch wieder auf.</string>
+
+    <string name="help_t3_title">Meine Stimme ist zu leise oder zu laut</string>
+    <string name="help_t3_body">In den Einstellungen → Audio die „Automatische Lautstärke-Anpassung" aktivieren – sie gleicht laute und leise Stimmen in Echtzeit aus. Um einzelne Peers leiser oder lauter zu machen, nutze während einer aktiven Verbindung den „Peer-Lautstärke"-Slider auf dem Hauptscreen.</string>
+
+    <string name="help_t4_title">Wind-Geräusche übertönen die Stimme</string>
+    <string name="help_t4_body">Auf dem Hauptscreen den Mikrofon-Modus auf „Wind-Filter" oder „Sprach-Gate" stellen. Der Wind-Filter schneidet die tiefen Frequenzen (das tieffrequente Rumpeln) raus; das Sprach-Gate überträgt während Sprechpausen gar nichts – der Peer hört kein Rauschen mehr in den Pausen.</string>
+
+    <string name="help_t5_title">Latenz zu hoch (über 1 Sekunde)</string>
+    <string name="help_t5_body">Bluetooth Classic teilt sich die Funkzeit zwischen SCO-Audio und RFCOMM-Daten; Ausschläge auf 500–800 ms sind normal. Darüber senkt die App die Opus-Bitrate automatisch ab (adaptive Bitrate). Bleibt die Latenz dauerhaft hoch, baut der Stale-Link-Detector die Verbindung nach ca. 12 s sauber neu auf.</string>
+
+    <string name="help_t6_title">Beide Telefone brauchen dieselbe Version</string>
+    <string name="help_t6_body">Das Audio-Frame-Format hängt vom Codec ab. Opus, μ-law und PCM sind untereinander nicht kompatibel – beide Telefone müssen denselben Codec sprechen. Default ist Opus 24 kbps; nur ändern, wenn der Peer dieselbe Einstellung hat.</string>
+</resources>

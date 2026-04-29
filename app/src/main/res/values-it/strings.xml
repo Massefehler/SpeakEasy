@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SpeakEasy</string>
+    <string name="subtitle">Intercom moto via Bluetooth</string>
+
+    <string name="section_connection">Connessione</string>
+    <string name="section_advanced">Avanzate</string>
+    <string name="section_howto">Come funziona</string>
+
+    <string name="btn_search">Cerca compagno</string>
+    <string name="btn_search_again">Cerca di nuovo</string>
+    <string name="btn_host">Ospita – attendi compagno</string>
+    <string name="btn_join">Connetti a dispositivo accoppiato</string>
+    <string name="btn_disconnect">Disconnetti</string>
+    <string name="btn_close">Chiudi</string>
+
+    <string name="mute">Microfono muto</string>
+    <string name="mute_hint">Non sarai sentito, ma continuerai ad ascoltare.</string>
+
+    <string name="peer_label">Compagno</string>
+    <string name="peer_none">Non connesso</string>
+
+    <string name="status_idle">Pronto</string>
+    <string name="status_searching">Cerco compagni …</string>
+    <string name="status_listening">In attesa di connessione …</string>
+    <string name="status_connecting">Connessione …</string>
+    <string name="status_connected">Connesso con %1$s</string>
+    <string name="status_reconnecting">Connessione persa – tentativo %1$d …</string>
+    <string name="status_error">Errore: %1$s</string>
+
+    <string name="section_levels">Livelli audio</string>
+    <string name="level_self">Tu</string>
+    <string name="level_peer">Compagno</string>
+
+    <string name="section_quick">Connessione rapida</string>
+    <string name="btn_direct_connect">Connetti con %1$s</string>
+    <string name="profile_actions_title">%1$s</string>
+    <string name="profile_action_connect">Connetti</string>
+    <string name="profile_action_rename">Rinomina</string>
+    <string name="profile_action_delete">Rimuovi</string>
+    <string name="profile_rename_title">Rinomina</string>
+    <string name="profile_rename_hint">Nuovo nome</string>
+
+    <string name="peer_volume">Volume compagno</string>
+    <string name="rtt_label">Latenza: %1$d ms</string>
+    <string name="rtt_unknown">Latenza: –</string>
+
+    <string name="peer_battery">Batteria del compagno: %1$d %%</string>
+
+    <string name="section_sensitivity">Sensibilità del filtro vocale</string>
+    <string name="sensitivity_label">%1$+d dB</string>
+    <string name="sensitivity_hint">Negativo = più sensibile (lascia passare voci basse), positivo = più rigido (più reiezione di vento/rumore).</string>
+
+    <string name="tts_connected">Connesso con %1$s</string>
+    <string name="tts_disconnected">Connessione terminata</string>
+    <string name="tts_reconnecting">Connessione persa, ritento</string>
+    <string name="tts_error">Connessione fallita</string>
+    <string name="tts_paused_for_call">Intercom in pausa</string>
+    <string name="tts_resumed">Intercom di nuovo attivo</string>
+
+    <string name="permission_rationale_title">Autorizzazione necessaria</string>
+    <string name="permission_rationale_msg">SpeakEasy ha bisogno delle autorizzazioni microfono e Bluetooth per far funzionare l\'intercom. Senza queste l\'app resta muta. Attiva le autorizzazioni nelle impostazioni dell\'app.</string>
+    <string name="permission_rationale_open">Apri impostazioni app</string>
+
+    <string name="diag_title">Diagnostica</string>
+    <string name="diag_state">Stato</string>
+    <string name="diag_peer">Compagno</string>
+    <string name="diag_codec">Codec</string>
+    <string name="diag_mic_mode">Modalità microfono</string>
+    <string name="diag_aec">Cancellatore d\'eco</string>
+    <string name="diag_ns">Riduzione rumore</string>
+    <string name="diag_frames">Frame TX / RX</string>
+    <string name="diag_rtt">Latenza ora/media</string>
+    <string name="diag_noise_floor">Soglia di rumore</string>
+    <string name="diag_gate_threshold">Soglia filtro</string>
+    <string name="diag_active">attivo</string>
+    <string name="diag_inactive">disattivo</string>
+
+    <string name="section_mic_mode">Modalità microfono</string>
+    <string name="mic_mode_open">Aperto</string>
+    <string name="mic_mode_filter">Filtro vento</string>
+    <string name="mic_mode_gate">Filtro vocale</string>
+    <string name="mic_mode_open_hint">Tutto viene trasmesso, anche vento e motore.</string>
+    <string name="mic_mode_filter_hint">Il vento a bassa frequenza è filtrato; la voce passa intatta.</string>
+    <string name="mic_mode_gate_hint">Trasmette solo la voce rilevata; il silenzio resta silenzio.</string>
+
+    <string name="intro_skip">Salta</string>
+    <string name="intro_next">Avanti</string>
+    <string name="intro_finish">Andiamo</string>
+    <string name="intro_1_title">Accoppia il tuo auricolare Bluetooth</string>
+    <string name="intro_1_body">Prima di partire: accoppia l\'auricolare moto o gli in-ear con ciascun telefono dalle impostazioni Bluetooth Android. Altrimenti l\'audio passerà dall\'altoparlante e dal microfono del telefono.</string>
+    <string name="intro_2_title">Tocca "Cerca" su entrambi i telefoni</string>
+    <string name="intro_2_body">Su entrambi i telefoni tocca il pulsante grande "Cerca compagno" e consenti la visibilità. Quando l\'altro telefono appare nell\'elenco, toccalo e conferma con "Sì": la connessione è attiva.</string>
+    <string name="intro_3_title">Verifica il volume</string>
+    <string name="intro_3_body">Una volta connessi, le barre di livello (Tu / Compagno) mostrano che l\'audio arriva all\'auricolare. Il volume si regola con i tasti fisici del telefono.</string>
+
+    <string name="battery_dialog_title">Disattiva l\'ottimizzazione batteria</string>
+    <string name="battery_dialog_msg">Per evitare che l\'intercom cada dopo un viaggio lungo, escludi SpeakEasy dall\'ottimizzazione batteria nelle impostazioni di sistema.</string>
+    <string name="battery_dialog_open">Apri impostazioni</string>
+    <string name="battery_dialog_later">Più tardi</string>
+
+    <!-- Selezione sfondo -->
+    <string name="prefs_wallpaper_title">Sfondo</string>
+    <string name="wallpaper_title">Sfondo</string>
+    <string name="wallpaper_default">Tramonto</string>
+    <string name="wallpaper_biker_1">Biker I</string>
+    <string name="wallpaper_biker_2">Biker II</string>
+    <string name="wallpaper_cross_1">Crossover</string>
+    <string name="wallpaper_naked">Naked Bike</string>
+    <string name="wallpaper_riders_1">Passeggero I</string>
+    <string name="wallpaper_riders_2">Passeggero II</string>
+    <string name="wallpaper_speed_1">Speed I</string>
+    <string name="wallpaper_speed_2">Speed II</string>
+    <string name="wallpaper_travel_1">Viaggio I</string>
+    <string name="wallpaper_travel_2">Viaggio II</string>
+
+    <!-- Avviso di responsabilità (mostrato al primo avvio, rileggibile in „Informazioni") -->
+    <string name="disclaimer_title">Prima di iniziare</string>
+    <string name="disclaimer_body">SpeakEasy è un progetto hobbistico gratuito, senza alcuna garanzia sulla stabilità della connessione o sulla qualità audio.\n\nUtilizza l\'app solo a veicolo fermo. Durante la guida la tua piena attenzione spetta al traffico e alle norme vigenti.\n\nLo sviluppatore non si assume alcuna responsabilità per danni, incidenti o altre conseguenze derivanti dall\'uso dell\'app.</string>
+    <string name="disclaimer_accept">Ho capito</string>
+    <string name="disclaimer_section_header">Avviso di responsabilità</string>
+
+    <string name="search_title">Compagni nelle vicinanze</string>
+    <string name="search_finished">Ricerca conclusa</string>
+    <string name="searching_for_peers">Ricerca in corso … entrambi i telefoni devono toccare "Cerca compagno".</string>
+    <string name="no_peers_found">Nessun compagno SpeakEasy trovato. Verifica che anche l\'altro telefono abbia toccato "Cerca compagno".</string>
+    <string name="connect_question_title">Connettere?</string>
+    <string name="connect_question_msg">Connettere con "%1$s"?</string>
+    <string name="must_allow_discoverable">La visibilità deve essere attiva per essere trovati dal compagno.</string>
+    <string name="yes">Sì</string>
+    <string name="no">No</string>
+    <string name="incoming_connected">Connessione con %1$s stabilita</string>
+
+    <string name="choose_peer">Connetti a dispositivo accoppiato</string>
+    <string name="no_paired_devices">Nessun dispositivo accoppiato — accoppia prima entrambi i telefoni nelle impostazioni Android.</string>
+    <string name="error_no_bluetooth">Questo dispositivo non ha il Bluetooth.</string>
+    <string name="error_permissions">Permessi richiesti (Bluetooth, microfono).</string>
+
+    <string name="hint">1. Accoppia entrambi i telefoni tra loro nelle impostazioni Android.\n2. Accoppia un auricolare Bluetooth a ogni telefono.\n3. Su un telefono tocca "Ospita", sull\'altro "Connetti".</string>
+
+    <string name="menu_settings">Impostazioni</string>
+    <string name="menu_diagnostic">Diagnostica</string>
+    <string name="menu_about">Informazioni</string>
+    <string name="menu_more">Altre opzioni</string>
+    <string name="menu_feedback">Invia feedback</string>
+
+    <string name="feedback_dialog_title">Invia feedback</string>
+    <string name="feedback_dialog_msg">Il tuo feedback verrà inviato via email allo sviluppatore. Facoltativamente puoi allegare i registri di crash locali (solo informazioni tecniche, niente audio né posizione).</string>
+    <string name="feedback_dialog_with_logs">Invia con registri</string>
+    <string name="feedback_dialog_without_logs">Invia</string>
+    <string name="feedback_subject">Feedback SpeakEasy %1$s</string>
+    <string name="feedback_body_template">[Scrivi qui il tuo feedback]\n\n---\nApp: %1$s (%2$d)\nDispositivo: %3$s %4$s\nAndroid: %5$s (SDK %6$d)\n</string>
+    <string name="feedback_no_email_app">Nessuna app email trovata su questo dispositivo.</string>
+    <string name="help_feedback_intro">Ancora bloccato o hai un\'idea? Manda due righe allo sviluppatore:</string>
+
+    <string name="settings_title">Impostazioni</string>
+    <string name="prefs_audio_section">Audio</string>
+    <string name="prefs_codec_title">Codec audio</string>
+    <string name="prefs_codec_summary">Quale codec trasporta la voce al compagno (entrambi i telefoni devono usare lo stesso).</string>
+    <string name="prefs_bitrate_title">Bitrate di Opus</string>
+    <string name="prefs_bitrate_summary">%1$d kbps – più alto = migliore qualità, più carico radio</string>
+    <string name="prefs_bitrate_value">%1$d kbps</string>
+    <string name="prefs_bitrate_hint">Più alto = migliore qualità vocale, più carico Bluetooth.</string>
+    <string name="prefs_fec_title">FEC: perdita pacchetti prevista</string>
+    <string name="prefs_fec_summary">%1$d %% – Opus riserva più dati per recuperare frame persi</string>
+    <string name="prefs_fec_value">%1$d %%</string>
+    <string name="prefs_fec_hint">Quanto Opus riserva in ogni pacchetto per riempire le perdite.</string>
+
+    <string name="prefs_connection_section">Connessione</string>
+    <string name="prefs_autoconnect_title">Connessione automatica all\'avvio</string>
+    <string name="prefs_autoconnect_summary">Si connette automaticamente all\'ultimo compagno quando apri l\'app.</string>
+    <string name="prefs_heartbeat_title">Intervallo heartbeat</string>
+    <string name="prefs_heartbeat_summary">%1$d s – più breve = rilevamento più rapido di cadute, più carico</string>
+    <string name="prefs_heartbeat_value">%1$d s</string>
+    <string name="prefs_heartbeat_hint">Più breve = rilevamento di cadute più rapido, più carico.</string>
+
+    <string name="prefs_ui_section">Interfaccia e display</string>
+    <string name="prefs_language_title">Lingua</string>
+    <string name="prefs_theme_title">Tema</string>
+    <string name="prefs_tts_title">Annunci di stato (TTS)</string>
+    <string name="prefs_tts_summary">Dice "Connesso" / "Connessione persa" nell\'auricolare.</string>
+    <string name="prefs_vibration_title">Feedback vibrazione</string>
+    <string name="prefs_vibration_summary">Breve vibrazione al cambio di stato.</string>
+    <string name="prefs_tones_title">Toni</string>
+    <string name="prefs_tones_summary">Brevi bip al cambio di stato.</string>
+    <string name="prefs_autodim_title">Riduzione luminosità automatica</string>
+    <string name="prefs_autodim_summary">Lo schermo si attenua dopo 10 s e si spegne dopo 40 s.</string>
+
+    <string name="prefs_about_section">Informazioni</string>
+    <string name="prefs_version_title">Versione</string>
+    <string name="prefs_show_intro_title">Mostra di nuovo l\'introduzione</string>
+    <string name="prefs_show_intro_summary">Mostra l\'introduzione di 3 pagine al prossimo avvio.</string>
+    <string name="prefs_licenses_title">Licenze open-source</string>
+    <string name="prefs_licenses_summary">libopus e altre librerie utilizzate.</string>
+    <string name="prefs_privacy_title">Privacy</string>
+    <string name="prefs_privacy_summary">SpeakEasy non invia dati a Internet. L\'audio passa direttamente tra i due telefoni.</string>
+    <string name="prefs_privacy_link_hint">Mostra l\'informativa sulla privacy completa →</string>
+    <string name="prefs_reset_title">Ripristina tutte le impostazioni</string>
+    <string name="prefs_reset_summary">Ripristina tutte le opzioni ai valori di fabbrica.</string>
+    <string name="prefs_reset_confirm">Tutte le impostazioni torneranno ai valori di fabbrica. Profili e dispositivi accoppiati restano.</string>
+
+    <string name="language_system">Predefinito di sistema</string>
+    <string name="language_en">English</string>
+    <string name="language_de">Deutsch</string>
+    <string name="language_es">Español</string>
+    <string name="language_it">Italiano</string>
+    <string name="language_fr">Français</string>
+
+    <string name="theme_system">Predefinito di sistema</string>
+    <string name="theme_light">Chiaro</string>
+    <string name="theme_dark">Scuro</string>
+
+    <string name="codec_opus">Opus (consigliato)</string>
+    <string name="codec_mulaw">G.711 μ-law (riserva)</string>
+    <string name="codec_pcm">PCM (non compresso)</string>
+
+    <string name="licenses_title">Licenze open-source</string>
+    <string name="licenses_intro">SpeakEasy utilizza le seguenti librerie open-source:</string>
+    <string name="licenses_opus_header">libopus 1.5.2 — Xiph.Org Foundation, BSD-3-Clause</string>
+    <string name="licenses_androidx_header">AndroidX e Material Components — Apache License 2.0</string>
+    <string name="licenses_androidx_text">Copyright (c) Google Inc. e collaboratori.\nDistribuito secondo la Apache License, versione 2.0.\nhttps://www.apache.org/licenses/LICENSE-2.0</string>
+
+    <string name="cd_more_options">Apri menu</string>
+
+    <string name="prefs_bt_pair_title">Accoppia dispositivi Bluetooth</string>
+    <string name="prefs_bt_pair_summary">Apre le impostazioni Bluetooth di Android per accoppiare l\'auricolare o l\'altro telefono.</string>
+
+    <string name="prefs_agc_title">Controllo automatico del livello</string>
+    <string name="prefs_agc_summary">Bilancia voci forti e deboli affinché il compagno senta un volume costante.</string>
+
+    <string name="prefs_mic_test_title">Prova del microfono</string>
+    <string name="prefs_mic_test_summary">Registra 5 secondi e riproducili nell\'auricolare per verificare il setup prima del viaggio.</string>
+    <string name="mic_test_title">Prova del microfono</string>
+    <string name="mic_test_intro">Tocca "Registra", parla normalmente per 5 secondi, poi tocca "Riproduci": la registrazione esce dall\'auricolare, esattamente come ti sentirebbe il compagno.</string>
+    <string name="mic_test_record_btn">Registra (5 s)</string>
+    <string name="mic_test_stop_btn">Stop</string>
+    <string name="mic_test_playback_btn">Riproduci</string>
+    <string name="mic_test_status_idle">Pronto</string>
+    <string name="mic_test_status_recording">Registrazione …</string>
+    <string name="mic_test_status_playing">Riproduzione …</string>
+    <string name="mic_test_status_done">Fatto</string>
+    <string name="mic_test_hint">Registra dal microfono di sistema attivo e riproduce dall\'uscita audio predefinita. La registrazione non viene salvata. Per testare specificamente il microfono dell\'auricolare Bluetooth, apri una connessione intercom reale — solo allora si attiva il routing all\'auricolare.</string>
+
+    <string name="diag_export_logs">Condividi log dei crash</string>
+    <string name="diag_export_empty">Nessun log di crash disponibile.</string>
+
+    <string name="prefs_adaptive_bitrate_title">Bitrate adattivo</string>
+    <string name="prefs_adaptive_bitrate_summary">Abbassa automaticamente il bitrate Opus quando la latenza sale (oltre 800 ms) e lo ripristina quando la linea si riprende (sotto 400 ms).</string>
+
+    <string name="menu_help">Aiuto e FAQ</string>
+    <string name="help_title">Aiuto e FAQ</string>
+    <string name="help_intro">Problemi tipici riscontrati nei test reali e come risolverli.</string>
+
+    <string name="help_t1_title">Il mio auricolare Bluetooth è muto</string>
+    <string name="help_t1_body">Assicurati che l\'auricolare sia accoppiato nelle impostazioni Bluetooth Android di ciascun telefono. SpeakEasy instrada l\'audio all\'auricolare solo quando c\'è una connessione intercom reale — l\'accoppiamento da solo non basta. Se non senti ancora nulla, disconnetti e riconnetti l\'auricolare dalle impostazioni di sistema.</string>
+
+    <string name="help_t2_title">La connessione cade ogni pochi minuti</string>
+    <string name="help_t2_body">Nella maggior parte dei casi è l\'ottimizzazione batteria che chiude il nostro servizio in background. In Impostazioni → Sistema → "Disattiva ottimizzazione batteria" verifica che SpeakEasy sia in whitelist. Tieni anche attivo l\'auto-riconnessione (1/3/8 s) — l\'app ricostruirà il link da sola.</string>
+
+    <string name="help_t3_title">La mia voce è troppo bassa o troppo alta</string>
+    <string name="help_t3_body">Attiva "Controllo automatico del livello" in Impostazioni → Audio — bilancia voci forti e deboli in tempo reale. Per alzare o abbassare un singolo compagno, usa il cursore "Volume del compagno" nella schermata principale durante la connessione.</string>
+
+    <string name="help_t4_title">Il rumore del vento copre la voce</string>
+    <string name="help_t4_body">Nella schermata principale cambia la modalità del microfono in "Filtro vento" o "Filtro vocale". Il filtro vento taglia le basse frequenze (il rombo del vento); il filtro vocale non trasmette nulla durante i silenzi — il compagno non sente fruscii nelle pause.</string>
+
+    <string name="help_t5_title">Latenza troppo alta (oltre 1 secondo)</string>
+    <string name="help_t5_body">Bluetooth Classic condivide il tempo radio tra audio SCO e dati RFCOMM; picchi a 500–800 ms sono normali. Oltre questa soglia l\'app abbassa automaticamente il bitrate Opus (bitrate adattivo). Se la latenza resta alta, il rilevatore di link bloccato ricostruisce la connessione dopo circa 12 secondi.</string>
+
+    <string name="help_t6_title">Entrambi i telefoni devono avere la stessa versione</string>
+    <string name="help_t6_body">Il formato del frame audio dipende dal codec. Opus, μ-law e PCM non sono compatibili tra loro — entrambi i telefoni devono usare lo stesso. Default Opus 24 kbps; cambialo solo se l\'altro ha la stessa impostazione.</string>
+</resources>

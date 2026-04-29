@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_blue" />
+    <!-- Foreground hat ab v1.6-beta2 das 33-%-Safe-Zone-Padding bereits ins
+         Bitmap eingebaut – kein <inset>-Wrapper mehr nötig. Damit landet der
+         Helm + Sprechblase auf jeder Maske (rund / squircle / quadratisch)
+         vollständig im sichtbaren Bereich. -->
+    <foreground android:drawable="@mipmap/ic_launcher_foreground" />
+</adaptive-icon>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Karte „Letzter Partner" – tiefer Sage-Ton im Dark-Mode. -->
+    <color name="direct_card_bg">#FF2D352F</color>
+</resources>

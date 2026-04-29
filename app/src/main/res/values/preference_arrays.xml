@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="codec_entries">
+        <item>@string/codec_opus</item>
+        <item>@string/codec_mulaw</item>
+        <item>@string/codec_pcm</item>
+    </string-array>
+    <string-array name="codec_values" translatable="false">
+        <item>opus</item>
+        <item>mulaw</item>
+        <item>pcm</item>
+    </string-array>
+
+    <string-array name="language_entries">
+        <item>@string/language_system</item>
+        <item>@string/language_en</item>
+        <item>@string/language_de</item>
+        <item>@string/language_es</item>
+        <item>@string/language_it</item>
+        <item>@string/language_fr</item>
+    </string-array>
+    <string-array name="language_values" translatable="false">
+        <item>system</item>
+        <item>en</item>
+        <item>de</item>
+        <item>es</item>
+        <item>it</item>
+        <item>fr</item>
+    </string-array>
+
+    <string-array name="theme_entries">
+        <item>@string/theme_system</item>
+        <item>@string/theme_light</item>
+        <item>@string/theme_dark</item>
+    </string-array>
+    <string-array name="theme_values" translatable="false">
+        <item>system</item>
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
+</resources>

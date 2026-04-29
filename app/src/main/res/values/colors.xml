@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="brand_primary">#FF1E88E5</color>
+    <color name="brand_primary_dark">#FF0D47A1</color>
+    <color name="brand_secondary">#FFFF6F00</color>
+
+    <color name="state_idle">#FF607D8B</color>
+    <color name="state_listening">#FFFFA000</color>
+    <color name="state_connecting">#FFFFA000</color>
+    <color name="state_connected">#FF2E7D32</color>
+    <color name="state_error">#FFC62828</color>
+
+    <!-- Karte „Letzter Partner" – dezenter Sage-/Grau-Grün-Ton (Light-Mode). -->
+    <color name="direct_card_bg">#FFE2E8DD</color>
+
+    <!-- Brand-Blau aus dem Launcher-PNG (gesamplet, dominanter Innen-Ton). -->
+    <color name="ic_launcher_blue">#FF1050B0</color>
+
+    <color name="wallpaper_card_stroke">@color/brand_primary</color>
+</resources>

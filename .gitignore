@@ -1,0 +1,39 @@
+# Build outputs
+build/
+app/build/
+.gradle/
+.kotlin/
+.cxx/
+app/.cxx/
+
+# IDE state
+.idea/
+*.iml
+.DS_Store
+
+# Local toolchain config (machine-specific)
+local.properties
+
+# Built artifacts (releases live in GitHub Releases, not in source tree)
+/SpeakEasy-*.apk
+/SpeakEasy-*.aab
+/betas/
+/versionen/
+
+# Internal working notes / Claude context (contain user-specific paths)
+Prompt.txt
+analyse.txt
+STATUS.md
+CLAUDE.md
+
+# Asset source folder (Photoshop/PNG quellen — not needed for build)
+/layout/
+
+# Keystore / signing — never commit
+*.jks
+*.keystore
+keystore.properties
+
+# OS / editor scratch
+*.swp
+*~

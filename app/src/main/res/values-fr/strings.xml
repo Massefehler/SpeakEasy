@@ -269,4 +269,40 @@
 
     <string name="help_t6_title">Les deux téléphones doivent avoir la même version</string>
     <string name="help_t6_body">Le format de trame audio dépend du codec. Opus, μ-law et PCM ne sont pas compatibles entre eux — les deux téléphones doivent utiliser le même. Par défaut Opus 24 kbps ; ne change que si le partenaire a le même réglage.</string>
+
+    <!-- Settings-Polish, v1.7-beta17 -->
+    <string name="prefs_default_mic_mode_title">Mode micro par défaut</string>
+    <string name="prefs_default_sensitivity_title">Sensibilité du gate par défaut</string>
+    <string name="prefs_default_sensitivity_value">%+d dB</string>
+    <string name="prefs_default_sensitivity_hint">Appliqué quand le gate vocal est actif. Négatif = moins sensible (filtre plus), positif = plus sensible.</string>
+    <string name="prefs_default_volume_title">Volume peer par défaut</string>
+    <string name="prefs_default_volume_value">%d %%</string>
+    <string name="prefs_default_volume_hint">Volume initial de la lecture du peer à chaque connexion. Ajustable en direct sur l\'écran principal.</string>
+    <string name="prefs_discoverable_title">Durée de visibilité</string>
+    <string name="prefs_discoverable_value">%d s</string>
+    <string name="prefs_profiles_title">Peers enregistrés</string>
+    <string name="prefs_profiles_summary_empty">Aucun peer enregistré</string>
+    <plurals name="prefs_profiles_summary">
+        <item quantity="one">%d peer enregistré</item>
+        <item quantity="other">%d peers enregistrés</item>
+    </plurals>
+    <string name="prefs_battery_title">Optimisation de la batterie</string>
+    <string name="prefs_battery_status_ok">Exclue — la connexion reste stable sur les longs trajets</string>
+    <string name="prefs_battery_status_warn">Active — la connexion peut tomber. Touche pour exclure.</string>
+    <string name="prefs_autodim_speed_title">Vitesse de la mise en veille</string>
+    <string name="autodim_speed_fast">Rapide (5 s / 15 s)</string>
+    <string name="autodim_speed_default">Standard (10 s / 30 s)</string>
+    <string name="autodim_speed_medium">Moyen (20 s / 60 s)</string>
+    <string name="autodim_speed_slow">Lent (60 s / 120 s)</string>
+    <string name="prefs_version_value">%1$s (%2$d) · Build %3$s</string>
+
+    <!-- ProfilesActivity -->
+    <string name="profiles_title">Peers enregistrés</string>
+    <string name="profiles_intro">Gère les peers enregistrés pour la connexion rapide. Touche le crayon pour renommer, la corbeille pour supprimer une entrée. L\'appui long sur l\'écran principal fonctionne toujours.</string>
+    <string name="profiles_empty">Aucun peer enregistré. Après ta première connexion réussie, l\'autre téléphone apparaîtra ici.</string>
+    <string name="profiles_delete_all">Supprimer tous les peers</string>
+    <string name="profiles_delete_confirm">Supprimer ce peer enregistré ?</string>
+    <string name="profiles_delete_all_confirm">Supprimer tous les peers enregistrés ? Tu devras les rechercher et te reconnecter à chacun.</string>
+    <string name="profiles_action_rename">Renommer</string>
+    <string name="profiles_action_delete">Supprimer</string>
 </resources>

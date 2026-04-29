@@ -38,4 +38,39 @@
         <item>light</item>
         <item>dark</item>
     </string-array>
+
+    <string-array name="mic_mode_entries">
+        <item>@string/mic_mode_open</item>
+        <item>@string/mic_mode_filter</item>
+        <item>@string/mic_mode_gate</item>
+    </string-array>
+    <string-array name="mic_mode_values" translatable="false">
+        <item>OPEN</item>
+        <item>WIND_FILTER</item>
+        <item>VOICE_GATE</item>
+    </string-array>
+
+    <string-array name="autodim_speed_entries">
+        <item>@string/autodim_speed_fast</item>
+        <item>@string/autodim_speed_default</item>
+        <item>@string/autodim_speed_medium</item>
+        <item>@string/autodim_speed_slow</item>
+    </string-array>
+    <string-array name="autodim_speed_values" translatable="false">
+        <item>fast</item>
+        <item>default</item>
+        <item>medium</item>
+        <item>slow</item>
+    </string-array>
+
+    <string-array name="discoverable_entries">
+        <item>@string/discoverable_60</item>
+        <item>@string/discoverable_120</item>
+        <item>@string/discoverable_300</item>
+    </string-array>
+    <string-array name="discoverable_values" translatable="false">
+        <item>60</item>
+        <item>120</item>
+        <item>300</item>
+    </string-array>
 </resources>

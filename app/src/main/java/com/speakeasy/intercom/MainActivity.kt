@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
     private val dimHandler = Handler(Looper.getMainLooper())
     private val dimToLow = Runnable {
         applyBrightness(BRIGHTNESS_DIM)
-        dimHandler.postDelayed(lightsOff, BRIGHTNESS_OFF_AFTER_MS)
+        dimHandler.postDelayed(lightsOff, autoOffDelayMs())
     }
     private val lightsOff = Runnable {
         applyBrightness(BRIGHTNESS_OFF)
@@ -255,7 +255,7 @@ class MainActivity : AppCompatActivity() {
             window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
             val prefs = androidx.preference.PreferenceManager.getDefaultSharedPreferences(this)
             if (prefs.getBoolean(IntercomService.KEY_AUTO_DIM_ENABLED, true)) {
-                dimHandler.postDelayed(dimToLow, BRIGHTNESS_DIM_AFTER_MS)
+                dimHandler.postDelayed(dimToLow, autoDimDelayMs())
             }
         } else {
             window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
@@ -266,6 +266,27 @@ class MainActivity : AppCompatActivity() {
         dimHandler.removeCallbacks(dimToLow)
         dimHandler.removeCallbacks(lightsOff)
     }
+
+    /**
+     * Liest die Auto-Dim-/Auto-Off-Zeiten aus dem User-Preset
+     * `KEY_AUTO_DIM_SPEED`. Default = „default" (10 s / 30 s) — passt zum
+     * Stand vor v1.7-beta17.
+     */
+    private fun autoDimDelayMs(): Long = when (autoDimSpeed()) {
+        "fast"   -> 5_000L
+        "medium" -> 20_000L
+        "slow"   -> 60_000L
+        else     -> 10_000L
+    }
+    private fun autoOffDelayMs(): Long = when (autoDimSpeed()) {
+        "fast"   -> 15_000L
+        "medium" -> 60_000L
+        "slow"   -> 120_000L
+        else     -> 30_000L
+    }
+    private fun autoDimSpeed(): String =
+        androidx.preference.PreferenceManager.getDefaultSharedPreferences(this)
+            .getString(IntercomService.KEY_AUTO_DIM_SPEED, "default") ?: "default"
 
     private fun applyBrightness(value: Float) {
         val attrs = window.attributes
@@ -537,9 +558,11 @@ class MainActivity : AppCompatActivity() {
     private fun onSearchClicked() {
         if (!ensureReady()) return
         if (!ensureScanReady()) return
-        // 60 Sekunden sichtbar – reicht, um den Peer in Ruhe finden zu lassen.
+        // Discoverable-Dauer aus den Settings (Default 60 s).
+        val timeoutS = androidx.preference.PreferenceManager.getDefaultSharedPreferences(this)
+            .getInt(IntercomService.KEY_DISCOVERABLE_TIMEOUT, 60)
         val intent = Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE)
-            .putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 60)
+            .putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, timeoutS)
         discoverableLauncher.launch(intent)
     }
 
@@ -1075,12 +1098,12 @@ class MainActivity : AppCompatActivity() {
         // klassisches VU-Meter an (sichtbarer Ausschlag, kein Wackeln).
         private const val VU_DECAY = 0.88f
 
-        // Auto-Dim: nach 10 s Untätigkeit auf 5 %, weitere 30 s später aus.
+        // Auto-Dim-Helligkeitsstufen. Die Verzögerungen leitet
+        // [autoDimDelayMs]/[autoOffDelayMs] aus dem User-Preset ab
+        // (KEY_AUTO_DIM_SPEED, Default 10 s / 30 s).
         private const val BRIGHTNESS_DEFAULT = -1f
         private const val BRIGHTNESS_DIM = 0.05f
         private const val BRIGHTNESS_OFF = 0.0f
-        private const val BRIGHTNESS_DIM_AFTER_MS = 10_000L
-        private const val BRIGHTNESS_OFF_AFTER_MS = 30_000L
 
     }
 }

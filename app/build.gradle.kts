@@ -1,3 +1,7 @@
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.TimeZone
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -17,6 +21,12 @@ val ksKeyAlias = (findProperty("speakeasyKeyAlias") as? String).orEmpty()
 val ksKeyPass = (findProperty("speakeasyKeyPassword") as? String).orEmpty()
 val releaseSigningReady = keystorePath != null && file(keystorePath).exists()
 
+// Build-Datum als BuildConfig-Feld — wird im Über-Screen angezeigt, hilft bei
+// Bug-Reports zu erkennen welcher Stand auf einem Tester-Phone läuft.
+val buildDate: String = SimpleDateFormat("yyyy-MM-dd").apply {
+    timeZone = TimeZone.getTimeZone("UTC")
+}.format(Date())
+
 android {
     namespace = "com.speakeasy.intercom"
     compileSdk = 36
@@ -26,8 +36,10 @@ android {
         applicationId = "com.speakeasy.intercom"
         minSdk = 26
         targetSdk = 36
-        versionCode = 47
-        versionName = "1.7-beta16"
+        versionCode = 48
+        versionName = "1.7-beta17"
+
+        buildConfigField("String", "BUILD_DATE", "\"$buildDate\"")
 
         ndk {
             abiFilters += listOf("arm64-v8a", "armeabi-v7a", "x86_64", "x86")
@@ -103,6 +115,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 

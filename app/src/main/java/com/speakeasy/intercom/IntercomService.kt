@@ -721,6 +721,10 @@ class IntercomService : android.app.Service() {
         const val KEY_AGC_ENABLED = "agc_enabled"
         const val KEY_ADAPTIVE_BITRATE = "adaptive_bitrate"
 
+        // Settings-Polish (seit v1.7-beta17).
+        const val KEY_AUTO_DIM_SPEED = "auto_dim_speed"      // "fast" / "default" / "medium" / "slow"
+        const val KEY_DISCOVERABLE_TIMEOUT = "discoverable_timeout_s" // 60 / 120 / 300 (Int)
+
         fun loadProfiles(context: Context): List<Profile> = ProfileStore.loadAll(context)
 
         fun loadMicMode(context: Context): AudioEngine.MicMode {

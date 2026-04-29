@@ -284,4 +284,43 @@
 
     <string name="help_t6_title">Both phones must run the same version</string>
     <string name="help_t6_body">Audio frame format depends on the codec choice. Opus, μ-law and PCM are not compatible with each other — both phones must use the same codec. Default is Opus 24 kbps; only change it if the peer has the same setting.</string>
+
+    <!-- Settings-Polish, v1.7-beta17 -->
+    <string name="prefs_default_mic_mode_title">Default mic mode</string>
+    <string name="prefs_default_sensitivity_title">Default gate sensitivity</string>
+    <string name="prefs_default_sensitivity_value">%+d dB</string>
+    <string name="prefs_default_sensitivity_hint">Used when voice gate is selected. Negative = less sensitive (filters more), positive = more sensitive.</string>
+    <string name="prefs_default_volume_title">Default peer volume</string>
+    <string name="prefs_default_volume_value">%d %%</string>
+    <string name="prefs_default_volume_hint">Initial peer playback volume on each connect. Can still be adjusted live in the main screen.</string>
+    <string name="prefs_discoverable_title">Discoverable timeout</string>
+    <string name="prefs_discoverable_value">%d s</string>
+    <string name="discoverable_60">60 s</string>
+    <string name="discoverable_120">2 min</string>
+    <string name="discoverable_300">5 min</string>
+    <string name="prefs_profiles_title">Saved peers</string>
+    <string name="prefs_profiles_summary_empty">No peers saved yet</string>
+    <plurals name="prefs_profiles_summary">
+        <item quantity="one">%d saved peer</item>
+        <item quantity="other">%d saved peers</item>
+    </plurals>
+    <string name="prefs_battery_title">Battery optimization</string>
+    <string name="prefs_battery_status_ok">Excluded — connection stays alive on long rides</string>
+    <string name="prefs_battery_status_warn">Active — connection may drop after a while. Tap to exclude.</string>
+    <string name="prefs_autodim_speed_title">Auto-dim speed</string>
+    <string name="autodim_speed_fast">Fast (5 s / 15 s)</string>
+    <string name="autodim_speed_default">Standard (10 s / 30 s)</string>
+    <string name="autodim_speed_medium">Medium (20 s / 60 s)</string>
+    <string name="autodim_speed_slow">Slow (60 s / 120 s)</string>
+    <string name="prefs_version_value">%1$s (%2$d) · Build %3$s</string>
+
+    <!-- ProfilesActivity -->
+    <string name="profiles_title">Saved peers</string>
+    <string name="profiles_intro">Manage the peer phones you have saved for quick connect. Tap the pencil to rename, the trash to delete a single entry. Long-press on the main screen still works too.</string>
+    <string name="profiles_empty">No peers saved yet. After your first successful connect, the partner phone shows up here.</string>
+    <string name="profiles_delete_all">Delete all peers</string>
+    <string name="profiles_delete_confirm">Remove this saved peer?</string>
+    <string name="profiles_delete_all_confirm">Remove all saved peers? You will need to search and reconnect each one.</string>
+    <string name="profiles_action_rename">Rename</string>
+    <string name="profiles_action_delete">Delete</string>
 </resources>

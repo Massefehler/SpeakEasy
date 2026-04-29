@@ -276,4 +276,40 @@
 
     <string name="help_t6_title">Beide Telefone brauchen dieselbe Version</string>
     <string name="help_t6_body">Das Audio-Frame-Format hängt vom Codec ab. Opus, μ-law und PCM sind untereinander nicht kompatibel – beide Telefone müssen denselben Codec sprechen. Default ist Opus 24 kbps; nur ändern, wenn der Peer dieselbe Einstellung hat.</string>
+
+    <!-- Settings-Polish, v1.7-beta17 -->
+    <string name="prefs_default_mic_mode_title">Mikrofon-Modus beim Start</string>
+    <string name="prefs_default_sensitivity_title">Gate-Empfindlichkeit beim Start</string>
+    <string name="prefs_default_sensitivity_value">%+d dB</string>
+    <string name="prefs_default_sensitivity_hint">Wird angewendet wenn Sprach-Gate aktiv ist. Negativ = unempfindlicher (filtert mehr), positiv = empfindlicher.</string>
+    <string name="prefs_default_volume_title">Peer-Lautstärke beim Start</string>
+    <string name="prefs_default_volume_value">%d %%</string>
+    <string name="prefs_default_volume_hint">Anfangs-Lautstärke der Peer-Wiedergabe bei jedem Connect. Lässt sich auf dem Hauptschirm weiter live anpassen.</string>
+    <string name="prefs_discoverable_title">Sichtbarkeit beim Suchen</string>
+    <string name="prefs_discoverable_value">%d s</string>
+    <string name="prefs_profiles_title">Gespeicherte Peers</string>
+    <string name="prefs_profiles_summary_empty">Noch keine Peers gespeichert</string>
+    <plurals name="prefs_profiles_summary">
+        <item quantity="one">%d gespeicherter Peer</item>
+        <item quantity="other">%d gespeicherte Peers</item>
+    </plurals>
+    <string name="prefs_battery_title">Akku-Optimierung</string>
+    <string name="prefs_battery_status_ok">Ausgenommen — Verbindung bleibt auf langen Touren stabil</string>
+    <string name="prefs_battery_status_warn">Aktiv — Verbindung kann nach einer Weile abbrechen. Tippen, um auszunehmen.</string>
+    <string name="prefs_autodim_speed_title">Auto-Dim-Geschwindigkeit</string>
+    <string name="autodim_speed_fast">Schnell (5 s / 15 s)</string>
+    <string name="autodim_speed_default">Standard (10 s / 30 s)</string>
+    <string name="autodim_speed_medium">Mittel (20 s / 60 s)</string>
+    <string name="autodim_speed_slow">Langsam (60 s / 120 s)</string>
+    <string name="prefs_version_value">%1$s (%2$d) · Build %3$s</string>
+
+    <!-- ProfilesActivity -->
+    <string name="profiles_title">Gespeicherte Peers</string>
+    <string name="profiles_intro">Verwalte deine gespeicherten Peer-Phones für die Schnellverbindung. Tippe auf den Stift zum Umbenennen, auf die Mülltonne zum Löschen einzelner Einträge. Long-Press auf dem Hauptschirm funktioniert weiterhin parallel.</string>
+    <string name="profiles_empty">Noch keine Peers gespeichert. Nach deinem ersten erfolgreichen Verbindungsaufbau erscheint der Partner hier.</string>
+    <string name="profiles_delete_all">Alle Peers löschen</string>
+    <string name="profiles_delete_confirm">Diesen gespeicherten Peer entfernen?</string>
+    <string name="profiles_delete_all_confirm">Wirklich alle gespeicherten Peers entfernen? Jeden musst du danach neu suchen und verbinden.</string>
+    <string name="profiles_action_rename">Umbenennen</string>
+    <string name="profiles_action_delete">Löschen</string>
 </resources>

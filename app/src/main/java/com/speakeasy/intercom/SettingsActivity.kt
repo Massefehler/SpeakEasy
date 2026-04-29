@@ -1,7 +1,9 @@
 package com.speakeasy.intercom
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.os.PowerManager
 import android.provider.Settings
 import android.view.View
 import android.widget.LinearLayout
@@ -42,6 +44,8 @@ class SettingsActivity : AppCompatActivity() {
         // gerade eine neue Auswahl getroffen hat.
         val wallpaperValue = findViewById<TextView?>(R.id.wallpaperValue)
         wallpaperValue?.text = getString(WallpaperRepository.current(this).displayNameRes)
+        refreshProfilesSummary()
+        refreshBatteryStatus()
     }
 
     // -- Audio ---------------------------------------------------------------
@@ -96,9 +100,68 @@ class SettingsActivity : AppCompatActivity() {
             prefs.edit().putBoolean(IntercomService.KEY_ADAPTIVE_BITRATE, checked).apply()
         }
 
+        wireDefaultMicMode()
+        wireDefaultSensitivity()
+        wireDefaultVolume()
+
         findViewById<View>(R.id.rowMicTest).setOnClickListener {
             startActivity(Intent(this, MicTestActivity::class.java))
         }
+    }
+
+    private fun wireDefaultMicMode() {
+        val value = findViewById<TextView>(R.id.defaultMicModeValue)
+        fun render() {
+            val mode = prefs.getString(IntercomService.KEY_MIC_MODE, AudioEngine.MicMode.WIND_FILTER.name)
+                ?: AudioEngine.MicMode.WIND_FILTER.name
+            value.text = micModeLabel(mode)
+        }
+        render()
+        findViewById<View>(R.id.rowDefaultMicMode).setOnClickListener {
+            val current = prefs.getString(IntercomService.KEY_MIC_MODE, AudioEngine.MicMode.WIND_FILTER.name)
+                ?: AudioEngine.MicMode.WIND_FILTER.name
+            singleChoiceDialog(
+                titleRes = R.string.prefs_default_mic_mode_title,
+                entriesArrayRes = R.array.mic_mode_entries,
+                valuesArrayRes = R.array.mic_mode_values,
+                selectedValue = current,
+            ) { picked ->
+                prefs.edit().putString(IntercomService.KEY_MIC_MODE, picked).apply()
+                render()
+            }
+        }
+    }
+
+    private fun wireDefaultSensitivity() {
+        val slider = findViewById<Slider>(R.id.defaultSensitivitySlider)
+        val value = findViewById<TextView>(R.id.defaultSensitivityValue)
+        val initBias = prefs.getFloat(IntercomService.KEY_GATE_BIAS, 0f)
+        slider.value = initBias.coerceIn(-10f, 10f)
+        value.text = getString(R.string.prefs_default_sensitivity_value, initBias.toInt())
+        slider.addOnChangeListener { _, v, _ ->
+            value.text = getString(R.string.prefs_default_sensitivity_value, v.toInt())
+            prefs.edit().putFloat(IntercomService.KEY_GATE_BIAS, v).apply()
+        }
+    }
+
+    private fun wireDefaultVolume() {
+        val slider = findViewById<Slider>(R.id.defaultVolumeSlider)
+        val value = findViewById<TextView>(R.id.defaultVolumeValue)
+        val initVol = prefs.getFloat(IntercomService.KEY_PEER_VOLUME, 1f)
+        val initPercent = (initVol * 100f).toInt().coerceIn(0, 100)
+        slider.value = initPercent.toFloat()
+        value.text = getString(R.string.prefs_default_volume_value, initPercent)
+        slider.addOnChangeListener { _, v, _ ->
+            val percent = v.toInt()
+            value.text = getString(R.string.prefs_default_volume_value, percent)
+            prefs.edit().putFloat(IntercomService.KEY_PEER_VOLUME, percent / 100f).apply()
+        }
+    }
+
+    private fun micModeLabel(name: String): String = when (name) {
+        AudioEngine.MicMode.OPEN.name -> getString(R.string.mic_mode_open)
+        AudioEngine.MicMode.VOICE_GATE.name -> getString(R.string.mic_mode_gate)
+        else -> getString(R.string.mic_mode_filter)
     }
 
     private fun codecLabel(value: String): String = when (value) {
@@ -135,6 +198,75 @@ class SettingsActivity : AppCompatActivity() {
             } catch (_: Throwable) {
                 startActivity(Intent(Settings.ACTION_SETTINGS))
             }
+        }
+
+        wireDiscoverable()
+        wireProfilesRow()
+        wireBatteryRow()
+    }
+
+    private fun wireDiscoverable() {
+        val value = findViewById<TextView>(R.id.discoverableValue)
+        fun render() {
+            val s = prefs.getInt(IntercomService.KEY_DISCOVERABLE_TIMEOUT, 60)
+            value.text = getString(R.string.prefs_discoverable_value, s)
+        }
+        render()
+        findViewById<View>(R.id.rowDiscoverable).setOnClickListener {
+            val current = prefs.getInt(IntercomService.KEY_DISCOVERABLE_TIMEOUT, 60).toString()
+            singleChoiceDialog(
+                titleRes = R.string.prefs_discoverable_title,
+                entriesArrayRes = R.array.discoverable_entries,
+                valuesArrayRes = R.array.discoverable_values,
+                selectedValue = current,
+            ) { picked ->
+                prefs.edit().putInt(IntercomService.KEY_DISCOVERABLE_TIMEOUT, picked.toInt()).apply()
+                render()
+            }
+        }
+    }
+
+    private fun wireProfilesRow() {
+        findViewById<View>(R.id.rowProfiles).setOnClickListener {
+            startActivity(Intent(this, ProfilesActivity::class.java))
+        }
+    }
+
+    private fun refreshProfilesSummary() {
+        val summary = findViewById<TextView?>(R.id.profilesSummary) ?: return
+        val n = ProfileStore.loadAll(this).size
+        summary.text = if (n == 0) {
+            getString(R.string.prefs_profiles_summary_empty)
+        } else {
+            resources.getQuantityString(R.plurals.prefs_profiles_summary, n, n)
+        }
+    }
+
+    private fun wireBatteryRow() {
+        findViewById<View>(R.id.rowBattery).setOnClickListener {
+            // Sprung zum System-Whitelist-Antrag — gleicher Pfad wie im Onboarding.
+            val direct = Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
+                .setData(Uri.fromParts("package", packageName, null))
+            try {
+                startActivity(direct)
+            } catch (_: Throwable) {
+                runCatching {
+                    startActivity(Intent(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS))
+                }
+            }
+        }
+    }
+
+    private fun refreshBatteryStatus() {
+        val tv = findViewById<TextView?>(R.id.batteryStatus) ?: return
+        val pm = getSystemService(POWER_SERVICE) as? PowerManager
+        val whitelisted = pm?.isIgnoringBatteryOptimizations(packageName) == true
+        if (whitelisted) {
+            tv.setText(R.string.prefs_battery_status_ok)
+            tv.setTextColor(getColor(R.color.state_connected))
+        } else {
+            tv.setText(R.string.prefs_battery_status_warn)
+            tv.setTextColor(getColor(R.color.state_listening))
         }
     }
 
@@ -205,6 +337,36 @@ class SettingsActivity : AppCompatActivity() {
             title = R.string.prefs_autodim_title, summary = R.string.prefs_autodim_summary,
             key = IntercomService.KEY_AUTO_DIM_ENABLED, default = true,
         )
+
+        wireAutoDimSpeed()
+    }
+
+    private fun wireAutoDimSpeed() {
+        val value = findViewById<TextView>(R.id.autoDimSpeedValue)
+        fun render() {
+            val v = prefs.getString(IntercomService.KEY_AUTO_DIM_SPEED, "default") ?: "default"
+            value.text = autoDimSpeedLabel(v)
+        }
+        render()
+        findViewById<View>(R.id.rowAutoDimSpeed).setOnClickListener {
+            val current = prefs.getString(IntercomService.KEY_AUTO_DIM_SPEED, "default") ?: "default"
+            singleChoiceDialog(
+                titleRes = R.string.prefs_autodim_speed_title,
+                entriesArrayRes = R.array.autodim_speed_entries,
+                valuesArrayRes = R.array.autodim_speed_values,
+                selectedValue = current,
+            ) { picked ->
+                prefs.edit().putString(IntercomService.KEY_AUTO_DIM_SPEED, picked).apply()
+                render()
+            }
+        }
+    }
+
+    private fun autoDimSpeedLabel(v: String): String = when (v) {
+        "fast" -> getString(R.string.autodim_speed_fast)
+        "medium" -> getString(R.string.autodim_speed_medium)
+        "slow" -> getString(R.string.autodim_speed_slow)
+        else -> getString(R.string.autodim_speed_default)
     }
 
     private fun wireSwitchRow(
@@ -244,7 +406,12 @@ class SettingsActivity : AppCompatActivity() {
         val versionTv = findViewById<TextView>(R.id.versionValue)
         versionTv.text = try {
             val info = packageManager.getPackageInfo(packageName, 0)
-            "${info.versionName} (${info.longVersionCode})"
+            getString(
+                R.string.prefs_version_value,
+                info.versionName,
+                info.longVersionCode,
+                BuildConfig.BUILD_DATE,
+            )
         } catch (_: Throwable) { "?" }
 
         findViewById<View>(R.id.rowShowIntro).setOnClickListener {

@@ -99,6 +99,13 @@
             android:parentActivityName=".SettingsActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".ProfilesActivity"
+            android:exported="false"
+            android:label="@string/profiles_title"
+            android:parentActivityName=".SettingsActivity"
+            android:screenOrientation="portrait" />
+
         <service
             android:name=".IntercomService"
             android:exported="false"

@@ -19,6 +19,16 @@ class LicensesActivity : AppCompatActivity() {
         findViewById<MaterialToolbar>(R.id.toolbar)
             .setNavigationOnClickListener { finish() }
 
+        findViewById<TextView>(R.id.versionLabel).text = try {
+            val info = packageManager.getPackageInfo(packageName, 0)
+            getString(
+                R.string.prefs_version_value,
+                info.versionName,
+                info.longVersionCode,
+                BuildConfig.BUILD_DATE,
+            )
+        } catch (_: Throwable) { "?" }
+
         val opusBody = findViewById<TextView>(R.id.licenseOpusBody)
         opusBody.text = readRawText(R.raw.license_opus)
     }

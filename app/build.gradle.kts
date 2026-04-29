@@ -26,8 +26,8 @@ android {
         applicationId = "com.speakeasy.intercom"
         minSdk = 26
         targetSdk = 36
-        versionCode = 46
-        versionName = "1.7-beta15"
+        versionCode = 47
+        versionName = "1.7-beta16"
 
         ndk {
             abiFilters += listOf("arm64-v8a", "armeabi-v7a", "x86_64", "x86")

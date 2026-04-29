@@ -113,6 +113,7 @@
     <string name="wallpaper_speed_2">Speed II</string>
     <string name="wallpaper_travel_1">Viaje I</string>
     <string name="wallpaper_travel_2">Viaje II</string>
+    <string name="wallpaper_tunnel_1">Túnel</string>
 
     <!-- Aviso legal (mostrado al primer inicio, releíble en „Acerca de") -->
     <string name="disclaimer_title">Antes de empezar</string>

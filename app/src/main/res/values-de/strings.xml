@@ -113,6 +113,7 @@
     <string name="wallpaper_speed_2">Speed II</string>
     <string name="wallpaper_travel_1">Reise I</string>
     <string name="wallpaper_travel_2">Reise II</string>
+    <string name="wallpaper_tunnel_1">Tunnel</string>
 
     <!-- Haftungshinweis (einmalig beim ersten Start, später nachlesbar im „Über"-Screen) -->
     <string name="disclaimer_title">Bevor du loslegst</string>

@@ -32,6 +32,7 @@ object WallpaperRegistry {
         Wallpaper("speed_2",  R.string.wallpaper_speed_2,  R.drawable.wp_speed_2),
         Wallpaper("travel_1", R.string.wallpaper_travel_1, R.drawable.wp_travel_1),
         Wallpaper("travel_2", R.string.wallpaper_travel_2, R.drawable.wp_travel_2),
+        Wallpaper("tunnel_1", R.string.wallpaper_tunnel_1, R.drawable.wp_tunnel_1),
     )
 
     fun byId(id: String?): Wallpaper =
